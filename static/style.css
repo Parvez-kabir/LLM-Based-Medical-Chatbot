@@ -1,0 +1,128 @@
+/* Reset & basic styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.chat-container {
+    background: #fff;
+    width: 600px;          /* increased width */
+    max-width: 95%;
+    border-radius: 15px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header {
+    background: #1f2937;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 1.8rem;     /* larger title */
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1rem;
+    margin-top: 6px;
+    color: #d1d5db;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: auto;
+    max-height: 500px;     /* taller chat box */
+    background: #f9fafb;
+}
+
+.chat-box .bot-message,
+.chat-box .user-message {
+    padding: 12px 20px;
+    border-radius: 20px;
+    max-width: 75%;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.bot-message {
+    background: #e5e7eb;
+    align-self: flex-start;
+    white-space: pre-wrap;
+}
+
+.user-message {
+    background: #1f2937;
+    color: #fff;
+    align-self: flex-end;
+}
+
+form {
+    display: flex;
+    padding: 15px;
+    background: #f3f4f6;
+}
+
+form input {
+    flex: 1;
+    padding: 12px 18px;
+    border-radius: 28px;
+    border: 1px solid #cbd5e1;
+    outline: none;
+    font-size: 1rem;
+}
+
+form button {
+    margin-left: 12px;
+    background: #1f2937;
+    color: #fff;
+    border: none;
+    border-radius: 28px;
+    padding: 0 22px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #374151;
+}
+
+/* Responsive for small screens */
+@media screen and (max-width: 650px) {
+    .chat-container {
+        width: 95%;
+    }
+
+    .chat-box {
+        max-height: 400px;
+        padding: 15px;
+    }
+
+    form input {
+        padding: 10px 14px;
+    }
+
+    form button {
+        padding: 0 16px;
+    }
+}
